@@ -22,7 +22,7 @@ resource "aws_instance" "web-prod" {
 yum update -y
 yum install httpd -y
 myip=`curl http://169.254.169.254/latest/meta-data/local-ipv4`
-echo "<h1>PROD Web Server with IP: $myip</h1><br> Build by Ruslan on Terraform WorkSpace - ${terraform.workspace}! " > /var/www/html/index.html
+echo "<h1>${server_name} Server with IP: $myip on ${server_size} instance</h1><br> Build by Ruslan on Terraform" > /var/www/html/index.html
 service httpd start && chkconfig httpd on
 UD
 
