@@ -27,7 +27,7 @@ service httpd start && chkconfig httpd on
 UD
 
   tags = {
-    Name  = var.server_name"
+    Name  = var.server_name
     Owner = "Ruslan Riznyk"
   }
 }
@@ -48,7 +48,7 @@ resource "aws_security_group" "web-prod" {
     cidr_blocks = ["0.0.0.0/0"]
   }
   tags = {
-    Name  = "PROD SecurityGroup - var.server_name"
+    Name  = var.server_name " SecurityGroup" 
     Owner = "Ruslan Riznyk"
   }
 }
