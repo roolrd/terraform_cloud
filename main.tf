@@ -48,7 +48,7 @@ resource "aws_security_group" "web-prod" {
     cidr_blocks = ["0.0.0.0/0"]
   }
   tags = {
-    Name  = var.server_name " SecurityGroup" 
+    Name  = var.server_name "- SecurityGroup" 
     Owner = "Ruslan Riznyk"
   }
 }
